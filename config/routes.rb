@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
+  match 'about' => 'about#show', :via => :get
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
@@ -8,6 +9,9 @@ Rails.application.routes.draw do
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
+  
+    match 'about' => 'about#show', :via => :get
+
   end
 
   resources :orders, only: [:create, :show]
