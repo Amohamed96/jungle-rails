@@ -14,9 +14,6 @@
         <li>
           <%= link_to 'Home', :root %>
         </li>
-        <li>
-         <%= link_to 'About', :about %>
-       </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Categories
@@ -28,6 +25,18 @@
             <% end %>
           </ul>
         </li>
+        <li>
+          <%= link_to 'About', :about %>
+        </li>
+
+        <li class = "login-signup">
+      <% if current_user %>
+        Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+      <% else %>
+        <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+      <% end %>
+      </li>
+      
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
@@ -50,4 +59,5 @@
       </ul>
     </div>
   </div>
+</nav>
 </nav>
