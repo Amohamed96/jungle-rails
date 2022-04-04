@@ -1,5 +1,6 @@
 # Jungle
 
+A mini e-commerce application built with Rails 4.2. Users can navigate through a list of products, add items to their cart, and buy using the Stripe API. 
 
 ## Additional Steps for Apple M1 Machines
 
